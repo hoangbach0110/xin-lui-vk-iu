@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffccdd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balloons {
+    position: absolute;
+    top: 10%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balloon::before {
+    content: '❤';
+    font-size: 30px;
+    color: #ff69b4;
+    position: absolute;
+    bottom: 90%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.gift-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #ff6347;
+    position: relative;
+}
+
+.lid {
+    width: 200px;
+    height: 50px;
+    background-color: #ff6347;
+    position: absolute;
+    top: -50px;
+    transition: top 0.5s;
+}
+
+.ribbon-vertical {
+    width: 20px;
+    height: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 90px;
+}
+
+.ribbon-horizontal {
+    width: 200px;
+    height: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 90px;
+}
+
+.message {
+    display: none;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
